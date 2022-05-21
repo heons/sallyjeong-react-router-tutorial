@@ -5,7 +5,17 @@ const Home = () => {
     <div>
       <h1>Home</h1>
       <p>The first page of the application.</p>
-      <Link to="/about">Go to about page</Link>
+      <ul>
+        <li>
+          <Link to="/about">Go to about page</Link>
+        </li>
+        <li>
+          <Link to="/profile/huen">Profile - huen</Link>
+        </li>
+        <li>
+          <Link to="/profile/gildong">Profile - gildong</Link>
+        </li>
+      </ul>
     </div>
   );
 };
