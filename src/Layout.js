@@ -7,7 +7,7 @@ const Layout = () => {
     navigate(-1);
   };
   const goArticle = () => {
-    navigate("/articles");
+    navigate("/articles", {replace: true});
   };
 
   return (
