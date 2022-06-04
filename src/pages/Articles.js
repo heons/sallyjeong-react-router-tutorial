@@ -10,34 +10,32 @@ const Articles = () => {
   return (
     <div>
       <ul>
-        <li>
-          <NavLink
-            to="/articles/1"
-            style={({ isActive }) => (isActive ? activeStyle : undefined)}
-          >
-            Article 1
-          </NavLink>
-        </li>
-        <li>
-          <NavLink
-            to="/articles/2"
-            style={({ isActive }) => (isActive ? activeStyle : undefined)}
-          >
-            Article 2
-          </NavLink>
-        </li>
-        <li>
-          <NavLink
-            to="/articles/3"
-            style={({ isActive }) => (isActive ? activeStyle : undefined)}
-          >
-            Article 3
-          </NavLink>
-        </li>
+        <ArticleItem id={1}/>
+        <ArticleItem id={2}/>
+        <ArticleItem id={3}/>
       </ul>
       <Outlet />
     </div>
   );
+};
+
+const ArticleItem = ({id}) => {
+    const activeStyle = {
+        color: "green",
+        fontWeight: "bold",
+        fontSize: "21",
+      };
+
+    return (
+        <li>
+          <NavLink
+            to={`/articles/${id}`}
+            style={({ isActive }) => (isActive ? activeStyle : undefined)}
+          >
+            Article {id}
+          </NavLink>
+        </li>
+    );
 };
 
 export default Articles;
